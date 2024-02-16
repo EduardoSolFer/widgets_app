@@ -12,7 +12,7 @@ const colorList = <Color>[
 class AppTheme {
   final int selectedColor;
 
-  AppTheme({this.selectedColor = 0})
+  AppTheme({this.selectedColor = 1})
       : assert(selectedColor >= 0,
             'El color seleccionado no está disponible,el valor debe de ser mayor a 0'),
         assert(selectedColor < colorList.length,
