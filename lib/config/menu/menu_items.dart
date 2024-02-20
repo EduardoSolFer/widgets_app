@@ -24,7 +24,7 @@ const appMenuItems = <MenuItem>[
 //TARJETAS
   MenuItem(
       title: "Tarjetas",
-      subTitle: "Contenedor estiliado",
+      subTitle: "Contenedor estilizado",
       link: "/cards",
       icon: Icons.credit_card
   ),
@@ -37,27 +37,33 @@ const appMenuItems = <MenuItem>[
   ),
 
   MenuItem(
-      title: "Tarjetas",
-      subTitle: "Contenedor estiliado",
+      title: "SnackBars y Dialogos",
+      subTitle: "Indicadores en pantalla",
+      link: "/snackBar",
+      icon: Icons.credit_card
+  ),
+  MenuItem(
+      title: "Animated Container",
+      subTitle: "Stateful widget animado",
+      link: "/animated",
+      icon: Icons.credit_card
+  ),
+  MenuItem(
+      title: "UI Controls + Tiles",
+      subTitle: "Una serie de controles de Flutter",
+      link: "/uicontrol",
+      icon: Icons.credit_card
+  ),
+  MenuItem(
+      title: "Introducción a la aplicación",
+      subTitle: "Pequeño tutorial introductorio",
       link: "/cards",
       icon: Icons.credit_card
   ),
   MenuItem(
-      title: "Tarjetas",
-      subTitle: "Contenedor estiliado",
-      link: "/cards",
-      icon: Icons.credit_card
-  ),
-  MenuItem(
-      title: "Tarjetas",
-      subTitle: "Contenedor estiliado",
-      link: "/cards",
-      icon: Icons.credit_card
-  ),
-  MenuItem(
-      title: "Tarjetas",
-      subTitle: "Contenedor estiliado",
-      link: "/cards",
+      title: "InfiniteScroll y Pull",
+      subTitle: "Listas infinitas y pull to refresh",
+      link: "/infinitescroll",
       icon: Icons.credit_card
   ),
 ];
