@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
@@ -22,28 +23,33 @@ class _HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-  final colors = Theme.of(context).colorScheme;
+    final colors = Theme.of(context).colorScheme;
 
     return ListView.builder(
-      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+      physics:
+          const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       itemCount: appMenuItems.length,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
-          leading: Icon(appMenuItems[index].icon, color: colors.primary, ),
+          leading: Icon(
+            appMenuItems[index].icon,
+            color: colors.primary,
+          ),
           title: Text(" ${appMenuItems[index].title}"),
           subtitle: Text(' ${appMenuItems[index].subTitle}'),
           //trailing: Text(" ${appMenuItems[index].link}"),
           trailing: const Icon(Icons.arrow_forward),
-          onTap: (
-          ){
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const ButtonsScreen(),
-              ),
-            );
+          onTap: () {
+            // context.go('/lib/presentation/screens/buttons/buttons_screen.dart');
+            // context.go('/lib/presentation/screens/cards/cards_screen.dart');
+            context.push(appMenuItems[index].link);
+            // Navigator.pushNamed(context, appMenuItems[index].link);
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(
+            //     builder: (context) => const ButtonsScreen(),
+            //   ),
+            // );
           },
-
         );
       },
     );
